@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import TodoList from './components/TodoList';
 import TodoInput from './components/TodoInput';
+import TodoTable from './components/TodoTable';
+
 import './App.css';
 
 interface Todo {
@@ -45,18 +46,7 @@ const App: React.FC = () => {
       <h1>Todo App</h1>
       
       <TodoInput addTodo={addTodo} />
-      <table id="todo-table">
-        <thead>
-          <tr>
-            <th>List things must do</th>
-            <th>Status</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          <TodoList todos={todos} toggleComplete={toggleComplete} deleteTodo={deleteTodo} />
-        </tbody>
-      </table>
+      <TodoTable todos={todos} toggleComplete={toggleComplete} deleteTodo={deleteTodo} />
     </div>
   );
 };

@@ -25,9 +25,9 @@ const TodoInput: React.FC<TodoInputProps> = ({ addTodo }) => {
         type="text"
         value={inputValue}
         onChange={handleInputChange}
-        placeholder="Lägg till en todo"
+        placeholder="Add thing you want to do"
       />
-      <button onClick={handleAddTodo}>Lägg till</button>
+      <button onClick={handleAddTodo}>Add to List</button>
     </div>
   );
 };
